@@ -1,0 +1,16 @@
+# Python
+*.pyc
+*~
+__pycache__
+
+# Env
+.env
+env/
+
+# Database
+
+
+# Visual Studio
+.vscode/
+.history/
+*.code-workspace
