@@ -41,3 +41,7 @@ def post_edit(request, id):
     else:
         form = PostForm(instance=post)
     return render(request, 'base/post_edit.html', {'form': form})
+
+def post_draft_list(request):
+    posts = Post.objects.filter(published_date__isnull=True).order_by('created_date')
+    return render(request, 'base/post_draft_list.html', {'posts': posts})
